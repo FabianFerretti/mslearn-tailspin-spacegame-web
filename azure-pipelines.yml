@@ -1,13 +1,13 @@
 trigger:
   - '*'
   
-  pool:
-    vmImage: 'ubuntu-22.04'
+pool:
+  vmImage: 'ubuntu-22.04'
   
-  variables:
-    buildConfiguration: 'Release'
+variables:
+  buildConfiguration: 'Release'
   
-  steps:
+steps:
   - task: UseDotNet@2
     displayName: 'Use .NET SDK 6.x'
     inputs:
