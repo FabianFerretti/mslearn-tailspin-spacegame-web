@@ -12,18 +12,18 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
-steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+#steps:
+#- script: dotnet build --configuration $(buildConfiguration)
+#  displayName: 'dotnet build $(buildConfiguration)'
 
-- task: DownloadFile@1
+- task: download
   inputs:
     sourceUrl: 'https://jrsoftware.org/download.php/is.exe'
     destinationFolder: '$(System.DefaultWorkingDirectory)'
-    destinationFile: 'is-unicode.exe'
+    destinationFile: 'is.exe'
 
 - task: CmdLine@2
   displayName: 'Install INNO Setup 6'
   inputs:
     script: |
-      $(System.DefaultWorkingDirectory)/is-unicode.exe /verysilent
+      $(System.DefaultWorkingDirectory)/is.exe /verysilent
