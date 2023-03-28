@@ -16,7 +16,7 @@ steps:
 #- script: dotnet build --configuration $(buildConfiguration)
 #  displayName: 'dotnet build $(buildConfiguration)'
 
-- task: download
+- task: DownloadFile@1
   inputs:
     sourceUrl: 'https://jrsoftware.org/download.php/is.exe'
     destinationFolder: '$(System.DefaultWorkingDirectory)'
