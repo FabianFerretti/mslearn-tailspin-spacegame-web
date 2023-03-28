@@ -20,8 +20,10 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      $VerbosePreference = 'Continue'
+      Write-Verbose 'Downloading Inno Setup 6...'
       Invoke-WebRequest -Uri 'https://jrsoftware.org/download.php/is.exe' -OutFile '$(System.DefaultWorkingDirectory)\is-unicode.exe'
-
+      Write-verbose 'INNO Setup 6 downloaded successfully.'
   
 
 - task: CmdLine@2
