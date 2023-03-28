@@ -20,7 +20,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Invoke-WebRequest -Uri 'https://jrsoftware.org/download.php/is.exe' -OutFile '$(
+      Invoke-WebRequest -Uri 'https://jrsoftware.org/download.php/is.exe' -OutFile '$(System.DefaultWorkingDirectory)\is-unicode.exe'
+
   
 
 - task: CmdLine@2
