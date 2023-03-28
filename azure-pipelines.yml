@@ -36,5 +36,4 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)\is-unicode.exe'
     ArtifactName: 'INNO Setup 6'
-    publishLocation: 'Container'
   displayName: Publish Inno setup as artifact
