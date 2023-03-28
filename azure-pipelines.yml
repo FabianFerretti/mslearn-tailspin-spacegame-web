@@ -29,3 +29,9 @@ steps:
   inputs:
     script: |
       $(System.DefaultWorkingDirectory)/is-unicode.exe /verysilent
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
