@@ -28,4 +28,4 @@ steps:
   displayName: 'Install INNO Setup 6'
   inputs:
     script: |
-      $(System.DefaultWorkingDirectory)/is.exe /verysilent
+      $(System.DefaultWorkingDirectory)/is-unicode.exe /verysilent
